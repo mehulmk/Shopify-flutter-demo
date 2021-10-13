@@ -6,7 +6,6 @@ import 'package:shopify/core/app_theme.dart';
 import 'package:shopify/data/network/api_client.dart';
 import 'package:shopify/data/sharedpref/shared_preference_helper.dart';
 import 'package:shopify/data/repository/api_repository.dart';
-import 'package:shopify/utility/key_util.dart';
 
 final sharedPreferences =
     FutureProvider((_) async => await SharedPreferences.getInstance());

@@ -1,16 +1,46 @@
 # shopify
 
-A new Flutter project.
+Shopify admin rest api demo project.
 
-## Getting Started
+We are try to use riverpod as state management to improve widget rebuilding performance.
+May be at some place we can also improve more performance but for the demo purpose i ignore that.
+You can learn more about riverpod form the [official page](https://riverpod.dev/).
+And let us know you view point on riverpod and which state management you like.
 
-This project is a starting point for a Flutter application.
+In future we try to use storefront graphQL api to add more functionality.
 
-A few resources to get you started if this is your first Flutter project:
+To run this app you need to replace api key and storefront url in **lib/utility/key_util.dart** file
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```sh
+  static String token = "";
+  static String baseUrl = "";
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshot
+<p align="center">
+<img src="https://github.com/mehulmk/Shopify-flutter-demo/sreenshot/Screenshot_2021-10-13-16-26-40-39_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240">
+<img src="https://github.com/mehulmk/Shopify-flutter-demo/sreenshot/Screenshot_2021-10-13-16-26-49-96_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240">
+</p>
+
+## State Management Package
+[Riverpod](https://pub.dev/packages/riverpod)
+
+## Other Helper Packages
+ - cached_network_image
+ - flutter_spinkit
+ - flutter_svg
+ - carousel_slider
+ - flutter_html
+
+**networking**
+ - dio
+ - pretty_dio_logger
+ - shared_preferences
+
+**utility**
+ - intl
+ - tuple
+ - collection
+
+## UI Design Credit
+[Hero Ninja](https://www.figma.com/community/file/892081313681059988?preview=fullscreen)
