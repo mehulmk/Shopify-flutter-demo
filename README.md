@@ -44,9 +44,9 @@ To run this app you need to replace api key and storefront url in **lib/utility/
  - collection
 
 ## UI Design Credit
-[Hero Ninja](https://www.figma.com/community/file/892081313681059988?preview=fullscreen)
+[![N|Solid](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/community/file/892081313681059988?preview=fullscreen)
 
-## Developers
+## Developer
 [![N|Solid](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mehul-makwana-430326b9/)
 
 <!-- LICENSE -->
