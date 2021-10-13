@@ -16,6 +16,10 @@ To run this app you need to replace api key and storefront url in **lib/utility/
   static String baseUrl = "";
 ```
 
+## Android APK
+[![N|Solid](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/mehulmk/Shopify-flutter-demo/blob/main/apk/shopify-app-release.apk)
+
+
 ## Screenshot
 | <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-26-40-39_42b55a4a8d57e92802a15981fbb6e994.jpg" height="450" width="240">  | <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-26-49-96_42b55a4a8d57e92802a15981fbb6e994.jpg" height="450" width="240"> | <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-27-47-35_42b55a4a8d57e92802a15981fbb6e994.jpg" height="450" width="240"> | <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-27-52-80_42b55a4a8d57e92802a15981fbb6e994.jpg" height="450" width="240"> |
 |:---:|:---:|:---:|:---:|
