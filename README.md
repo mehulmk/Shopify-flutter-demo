@@ -17,10 +17,11 @@ To run this app you need to replace api key and storefront url in **lib/utility/
 ```
 
 ## Screenshot
-<p align="center">
-<img src="https://github.com/mehulmk/Shopify-flutter-demo/sreenshot/Screenshot_2021-10-13-16-26-40-39_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240">
-<img src="https://github.com/mehulmk/Shopify-flutter-demo/sreenshot/Screenshot_2021-10-13-16-26-49-96_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240">
-</p>
+| <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-26-40-39_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240">  | <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-26-49-96_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240"> | <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-27-47-35_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240"> | <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-27-52-80_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240"> |
+|:---:|:---:|:---:|:---:|
+| Home | Search | Cart | Offer |
+| <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-27-55-37_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240">  | <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-28-23-49_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240"> | <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-28-13-40_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240"> | <img src="https://github.com/mehulmk/Shopify-flutter-demo/blob/main/sreenshot/Screenshot_2021-10-13-16-28-02-27_42b55a4a8d57e92802a15981fbb6e994.jpg" height="512" width="240"> |
+| Account | Product Details | Product List | Category List |
 
 ## State Management Package
 [Riverpod](https://pub.dev/packages/riverpod)
