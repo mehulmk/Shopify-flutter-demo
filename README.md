@@ -1,4 +1,4 @@
-# shopify
+# Shopify
 
 Shopify admin rest api demo project.
 
