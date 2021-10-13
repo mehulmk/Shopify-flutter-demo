@@ -7,7 +7,7 @@ May be at some place we can also improve more performance but for the demo purpo
 You can learn more about riverpod form the [official page](https://riverpod.dev/).
 And let us know you view point on riverpod and which state management you like.
 
-In future we try to use storefront graphQL api to add more functionality.
+In future we will try to use storefront graphQL api to add more functionality.
 
 To run this app you need to replace api key and storefront url in **lib/utility/key_util.dart** file
 
