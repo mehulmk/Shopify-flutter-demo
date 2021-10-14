@@ -2,7 +2,7 @@
 
 Shopify admin rest api demo project.
 
-We are try to use riverpod as state management to improve widget rebuilding performance.
+We are try to use **riverpod** as state management to improve widget rebuilding performance.
 May be at some place we can also improve more performance but for the demo purpose i ignore that.
 You can learn more about riverpod form the [official page](https://riverpod.dev/).
 And let us know you view point on riverpod and which state management you like.
