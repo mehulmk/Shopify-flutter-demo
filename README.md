@@ -12,8 +12,8 @@ In future we will try to use storefront graphQL api to add more functionality.
 To run this app you need to replace api key and storefront url in **lib/utility/key_util.dart** file
 
 ```sh
-  static String token = "";
-  static String baseUrl = "";
+  static String token = "shppa_adgjgsdfsjkgdjfsgdjgh";
+  static String baseUrl = "https://{shop}.myshopify.com/admin/api/2022-01/";
 ```
 
 ## Android APK
@@ -46,6 +46,9 @@ To run this app you need to replace api key and storefront url in **lib/utility/
  - intl
  - tuple
  - collection
+
+## Dummy Product
+[GitHub](https://github.com/JoshHighland/shopify-dummy-data/blob/master/shopify_product_import_with_multi_variants_and_images.csv)
 
 ## UI Design Credit
 [![N|Solid](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/community/file/892081313681059988?preview=fullscreen)
