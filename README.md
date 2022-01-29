@@ -13,7 +13,7 @@ To run this app you need to replace api key and storefront url in **lib/utility/
 
 ```sh
   static String token = "shppa_adgjgsdfsjkgdjfsgdjgh";
-  static String baseUrl = "https://{shop}.myshopify.com/admin/api/2022-01/";
+  static String baseUrl = "https://{shop}.myshopify.com/admin/api/20XX-XX/";
 ```
 
 ## Android APK
