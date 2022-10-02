@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:shopify/data/model/response.dart';
 import 'package:shopify/data/network/exceptions.dart';
 
@@ -97,6 +98,8 @@ void main() {
       })
       .liftError()
       .listen((event) {
-        print("$event");
+        if (kDebugMode) {
+          print("$event");
+        }
       });
 }

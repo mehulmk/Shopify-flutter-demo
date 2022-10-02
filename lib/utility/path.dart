@@ -45,9 +45,9 @@ class Path {
   String toString() {
     String path = "/";
     for (var element in components) {
-      path = path + element + "/";
+      path = "$path$element/";
     }
-    return path.substring(0, path.length - 1) + ".json";
+    return "${path.substring(0, path.length - 1)}.json";
   }
 
   Path child(String child) {
@@ -104,7 +104,7 @@ class Path {
     if (remainder == null) {
       return component;
     } else {
-      return remainder! + "." + component;
+      return "${remainder!}.$component";
     }
   }
 }

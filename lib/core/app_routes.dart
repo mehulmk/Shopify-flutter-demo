@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopify/data/model/collection_list.dart';
 import 'package:shopify/view/categoryList/category_list_view.dart';

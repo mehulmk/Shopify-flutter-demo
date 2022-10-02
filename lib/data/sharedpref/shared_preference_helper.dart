@@ -70,10 +70,10 @@ class SharedPreferencesHelper {
   // get object
   Map<String, dynamic>? getObj(String key) {
     if (_prefs == null) return null;
-    String? _data = _prefs!.getString(key);
-    return (_data == null || _data.isEmpty)
+    String? data = _prefs!.getString(key);
+    return (data == null || data.isEmpty)
         ? null
-        : json.decode(_data) as Map<String, dynamic>;
+        : json.decode(data) as Map<String, dynamic>;
   }
 
   // put object
@@ -100,8 +100,8 @@ class SharedPreferencesHelper {
     if (_prefs == null) return null;
     List<String>? dataLis = _prefs!.getStringList(key);
     return dataLis?.map((value) {
-      Map _dataMap = json.decode(value);
-      return _dataMap;
+      Map dataMap = json.decode(value);
+      return dataMap;
     }).toList();
   }
 
@@ -119,10 +119,10 @@ class SharedPreferencesHelper {
   Future<bool> putObjectList(String key, List<Object> list) {
     if (_prefs == null) return Future.value(false);
 
-    List<String>? _dataList = list.map((value) {
+    List<String>? dataList = list.map((value) {
       return json.encode(value);
     }).toList();
-    return _prefs!.setStringList(key, _dataList);
+    return _prefs!.setStringList(key, dataList);
   }
 
   // get dynamic

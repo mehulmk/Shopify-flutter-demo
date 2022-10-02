@@ -7,9 +7,9 @@ import 'package:shopify/utility/path.dart';
 
 class ApiService {
   late Dio dio;
-  SharedPreferencesHelper _sharedPrefsHelper;
+  SharedPreferencesHelper sharedPrefsHelper;
 
-  ApiService(this._sharedPrefsHelper) {
+  ApiService(this.sharedPrefsHelper) {
     dio = Dio();
     _initApiClient();
   }

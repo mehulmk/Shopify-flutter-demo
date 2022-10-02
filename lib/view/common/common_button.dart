@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:shopify/core/color_scheme.dart';
 
@@ -11,14 +10,15 @@ class CommonButton extends StatelessWidget {
   final double height;
   final FontWeight fontWeight;
 
-  CommonButton({
+  const CommonButton({
+    Key? key,
     required this.label,
     required this.onPressed,
     this.padding = 16,
     this.height = 56,
     this.fontWeight = FontWeight.bold,
     this.isLoading = false,
-  }) : super();
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

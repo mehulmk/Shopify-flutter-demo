@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shopify/core/app_colors.dart';
 
 class AccountView extends StatelessWidget {

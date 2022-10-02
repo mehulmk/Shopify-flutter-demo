@@ -1,12 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shopify/core/app_colors.dart';
 import 'package:shopify/view/account/account_view.dart';
 import 'package:shopify/view/cart/cart_view.dart';
 import 'package:shopify/view/home/home_view.dart';
-import 'package:shopify/view/home/home_view_model.dart';
 import 'package:shopify/view/main/main_view_model.dart';
 import 'package:shopify/view/offer/offer_view.dart';
 import 'package:shopify/view/search/search_view.dart';

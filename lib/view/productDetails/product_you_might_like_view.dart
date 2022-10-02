@@ -1,11 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shopify/core/app_colors.dart';
-import 'package:shopify/core/app_routes.dart';
-import 'package:shopify/data/model/collection_list.dart';
-import 'package:shopify/utility/key_util.dart';
 import 'package:shopify/view/common/product_item_view.dart';
 import 'package:shopify/view/productDetails/product_details_model.dart';
 

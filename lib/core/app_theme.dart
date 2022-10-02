@@ -5,7 +5,7 @@ class ThemeController {
   static ThemeData lightTheme() {
     final ThemeData base = ThemeData.light();
 
-    TextTheme _buildTextThemeLight(TextTheme base) {
+    TextTheme buildTextThemeLight(TextTheme base) {
       return base.copyWith(
         headline1: base.headline1!.copyWith(),
         headline5: base.headline5!
@@ -86,13 +86,13 @@ class ThemeController {
           elevation: 10,
           shadowColor: const Color(0xff000000).withOpacity(0.25),
         ),
-        textTheme: _buildTextThemeLight(base.textTheme));
+        textTheme: buildTextThemeLight(base.textTheme));
   }
 
   static ThemeData darkTheme() {
     final ThemeData base = ThemeData.dark();
 
-    TextTheme _buildTextThemeDark(TextTheme base) {
+    TextTheme buildTextThemeDark(TextTheme base) {
       return base.copyWith(
         headline1: base.headline1!.copyWith(),
         headline5: base.headline5!.copyWith(fontWeight: FontWeight.bold),
@@ -169,6 +169,6 @@ class ThemeController {
           elevation: 10,
           shadowColor: const Color(0xff000000).withOpacity(0.25),
         ),
-        textTheme: _buildTextThemeDark(base.textTheme));
+        textTheme: buildTextThemeDark(base.textTheme));
   }
 }

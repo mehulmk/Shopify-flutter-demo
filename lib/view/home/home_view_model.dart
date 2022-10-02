@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shopify/data/model/product_list.dart';
 import 'package:shopify/data/repository/api_repository.dart';
@@ -18,7 +18,9 @@ class HomeViewModel with ChangeNotifier {
       productList = value;
       notifyListeners();
     }, onError: (e) {
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
     });
   }
 }

@@ -19,11 +19,11 @@ class Category {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['categoryType'] = this.categoryType;
-    data['network'] = this.network;
-    data['title'] = this.title;
-    data['id'] = this.id;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['categoryType'] = categoryType;
+    data['network'] = network;
+    data['title'] = title;
+    data['id'] = id;
     return data;
   }
 }
