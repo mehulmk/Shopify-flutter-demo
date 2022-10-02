@@ -10,8 +10,8 @@ class ProductSizeSelectionView extends ConsumerWidget {
   final List<Variants>? variants;
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final selectedVariant = watch(productSelectedVariants).state;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final selectedVariant = ref.watch(productSelectedVariants.notifier).state;
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -36,7 +36,7 @@ class ProductSizeSelectionView extends ConsumerWidget {
             itemCount: variants!.length,
             itemBuilder: (context, index) => InkWell(
               onTap: () {
-                context.read(productSelectedVariants).state = index;
+                ref.read(productSelectedVariants.notifier).state = index;
               },
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 20),

@@ -94,8 +94,8 @@ class ProductVariantsSukView extends ConsumerWidget {
   final List<Variants>? variants;
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final selectedVariant = watch(productSelectedVariants).state;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final selectedVariant = ref.watch(productSelectedVariants.notifier).state;
 
     return Text(variants![selectedVariant].sku.toString());
   }

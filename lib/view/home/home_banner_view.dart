@@ -12,9 +12,9 @@ class HomeBannerView extends ConsumerWidget {
   const HomeBannerView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final collectionList = watch(homeBannerListProvider);
-    final indicator = watch(homeBannerIndicator).state;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final collectionList = ref.watch(homeBannerListProvider);
+    final indicator = ref.watch(homeBannerIndicator);
 
     return collectionList.when(
         data: (list) => Column(
@@ -27,7 +27,7 @@ class HomeBannerView extends ConsumerWidget {
                       height: 230,
                       viewportFraction: 1,
                       onPageChanged: (index, reason) {
-                        context.read(homeBannerIndicator).state = index;
+                        ref.read(homeBannerIndicator.notifier).state = index;
                       }),
                 ),
                 Row(

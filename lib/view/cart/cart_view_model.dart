@@ -11,9 +11,9 @@ final totalAmountProvider = StateProvider((ref) {
       .list
       .map((e) => Tuple2(double.parse(e.variants!.price!), e.count!))
       .fold<double>(
-      0.0,
+          0.0,
           (previousValue, element) =>
-      previousValue + element.item1 * element.item2);
+              previousValue + element.item1 * element.item2);
 });
 
 final refreshCart = StateProvider((ref) => false);
@@ -24,7 +24,7 @@ final cartListProvider = ChangeNotifierProvider((ref) {
 
 class CartList extends ChangeNotifier {
   List<Cart> list = [];
-  ProviderReference ref;
+  Ref ref;
 
   CartList(this.ref) {
     refresh();

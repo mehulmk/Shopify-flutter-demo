@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.5
 
   # state management
-  flutter_riverpod: ^0.14.0+3
+  flutter_riverpod: ^2.0.0
 
   # widget
   cached_network_image: ^3.2.2

@@ -12,8 +12,8 @@ class MainView extends ConsumerWidget {
   const MainView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final bottomSelectedItem = watch(bottomSelectedItemProvider).state;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final bottomSelectedItem = ref.watch(bottomSelectedItemProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -35,7 +35,7 @@ class MainView extends ConsumerWidget {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: bottomSelectedItem,
         onTap: (index) {
-          context.read(bottomSelectedItemProvider).state = index;
+          ref.read(bottomSelectedItemProvider.notifier).state = index;
         },
         selectedItemColor: AppColor.blue,
         unselectedItemColor: AppColor.lightDivider,

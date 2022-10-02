@@ -1,6 +1,6 @@
 class KeyUtil {
-  static String token = "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";
-  static String baseUrl = "https://nividata-test-store.myshopify.com/admin/api/2021-07/";
+  static String token = "";
+  static String baseUrl = "";
 
   static const List<int> homeBanner = [
     281661669575, //Footwear

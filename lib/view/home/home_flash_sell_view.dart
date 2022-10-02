@@ -12,8 +12,8 @@ class HomeFlashSellView extends ConsumerWidget {
   const HomeFlashSellView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final productsList = watch(homeFlashSellProductsProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final productsList = ref.watch(homeFlashSellProductsProvider);
 
     return Column(
       children: [

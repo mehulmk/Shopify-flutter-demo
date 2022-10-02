@@ -11,8 +11,8 @@ class HomeCategoryView extends ConsumerWidget {
   const HomeCategoryView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final homeCategoryList = watch(homeCategoryListProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final homeCategoryList = ref.watch(homeCategoryListProvider);
 
     return Column(
       children: [

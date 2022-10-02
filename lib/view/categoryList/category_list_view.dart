@@ -9,8 +9,8 @@ class CategoryListView extends ConsumerWidget {
   const CategoryListView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final categoryList = watch(categoryListProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final categoryList = ref.watch(categoryListProvider);
 
     return Scaffold(
       appBar: AppBar(

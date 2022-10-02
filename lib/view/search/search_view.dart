@@ -9,9 +9,9 @@ class SearchView extends ConsumerWidget {
   const SearchView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final manCategoryList = watch(manCategoryListProvider);
-    final womanCategoryList = watch(womanCategoryListProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final manCategoryList = ref.watch(manCategoryListProvider);
+    final womanCategoryList = ref.watch(womanCategoryListProvider);
 
     return Column(
       children: [

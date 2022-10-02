@@ -10,8 +10,8 @@ class ProductYouMightLikeView extends ConsumerWidget {
   final String productType;
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final productsList = watch(productYouMightLikeProvider(productType));
+  Widget build(BuildContext context, WidgetRef ref) {
+    final productsList = ref.watch(productYouMightLikeProvider(productType));
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

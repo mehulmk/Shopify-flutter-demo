@@ -21,8 +21,8 @@ class ProductDetailsView extends ConsumerWidget {
   const ProductDetailsView({required this.id, Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final products = watch(productDetailsProvider(id));
+  Widget build(BuildContext context, WidgetRef ref) {
+    final products = ref.watch(productDetailsProvider(id));
 
     return products.when(
         data: (product) => Scaffold(
@@ -41,7 +41,7 @@ class ProductDetailsView extends ConsumerWidget {
                           height: 230,
                           viewportFraction: 1,
                           onPageChanged: (index, reason) {
-                            context.read(productBannerIndicator).state = index;
+                            ref.read(productBannerIndicator.notifier).state = index;
                           }),
                     ),
                     ProductBannerDotsView(images: product.images),
@@ -98,25 +98,25 @@ class ProductDetailsView extends ConsumerWidget {
                     CommonButton(
                         label: "Add To Cart",
                         onPressed: () async {
-                          await context
+                          await ref
                               .read(sharedPreferencesHelper)
                               .putObjectList(Preferences.cart, [
-                            ...context
+                            ...ref
                                 .read(sharedPreferencesHelper)
                                 .getObjectList<Cart>(Preferences.cart,
                                     (map) => Cart.fromJson(map)),
                             Cart(
                                 id: product.id,
                                 title: product.title,
-                                variants: product.variants![context
-                                    .read(productSelectedVariants)
+                                variants: product.variants![ref
+                                    .read(productSelectedVariants.notifier)
                                     .state],
-                                images: product.images![context
-                                    .read(productSelectedVariants)
+                                images: product.images![ref
+                                    .read(productSelectedVariants.notifier)
                                     .state],
                                 image: product.image)
                           ]);
-                          context.read(cartListProvider).refresh();
+                          ref.read(cartListProvider).refresh();
                         }),
                     const SizedBox(height: 16),
                   ],
@@ -153,8 +153,8 @@ class ProductBannerDotsView extends ConsumerWidget {
   final List<Images>? images;
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final indicator = watch(productBannerIndicator).state;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final indicator = ref.watch(productBannerIndicator.notifier).state;
 
     return (images == null || images!.length <= 1)
         ? const SizedBox()
@@ -180,8 +180,8 @@ class ProductPriceView extends ConsumerWidget {
   final List<Variants>? variants;
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final selectedVariant = watch(productSelectedVariants).state;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final selectedVariant = ref.watch(productSelectedVariants.notifier).state;
 
     return Padding(
       padding: const EdgeInsets.all(16),

@@ -11,8 +11,8 @@ class ProductListView extends ConsumerWidget {
   final Collection collection;
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final productsList = watch(productListProductsProvider(collection.id!));
+  Widget build(BuildContext context, WidgetRef ref) {
+    final productsList =ref. watch(productListProductsProvider(collection.id!));
 
     return Scaffold(
       appBar: AppBar(

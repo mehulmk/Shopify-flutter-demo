@@ -13,8 +13,8 @@ class HomeRecommendedProductView extends ConsumerWidget {
   const HomeRecommendedProductView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final productsList = watch(homeRecommendedProductsProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final productsList = ref.watch(homeRecommendedProductsProvider);
 
     return Column(
       children: [

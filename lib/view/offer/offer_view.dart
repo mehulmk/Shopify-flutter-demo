@@ -10,8 +10,8 @@ class OfferView extends ConsumerWidget {
   const OfferView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final offerList = watch(offerListProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final offerList = ref.watch(offerListProvider);
 
     return offerList.when(
         data: (list) => ListView(

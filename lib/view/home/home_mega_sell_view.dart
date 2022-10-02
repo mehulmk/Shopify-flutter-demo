@@ -12,8 +12,8 @@ class HomeMegaSellView extends ConsumerWidget {
   const HomeMegaSellView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final productsList = watch(homeMegaSellProductsProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final productsList = ref.watch(homeMegaSellProductsProvider);
 
     return Column(
       children: [

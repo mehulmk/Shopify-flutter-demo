@@ -12,9 +12,9 @@ class CartView extends ConsumerWidget {
   const CartView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final cartList = watch(cartListProvider).list;
-    final totalAmount = watch(totalAmountProvider).state;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final cartList = ref.watch(cartListProvider).list;
+    final totalAmount = ref.watch(totalAmountProvider);
 
     return (cartList.isEmpty)
         ? Center(
@@ -83,11 +83,11 @@ class CartView extends ConsumerWidget {
                                         ),
                                         InkWell(
                                           onTap: () async {
-                                            await context
+                                            await ref
                                                 .read(sharedPreferencesHelper)
                                                 .putObjectList(
                                                     Preferences.cart, [
-                                              ...context
+                                              ...ref
                                                   .read(sharedPreferencesHelper)
                                                   .getObjectList<Cart>(
                                                       Preferences.cart,
@@ -95,7 +95,7 @@ class CartView extends ConsumerWidget {
                                                           Cart.fromJson(map))
                                                 ..removeAt(index)
                                             ]);
-                                            context
+                                            ref
                                                 .read(cartListProvider)
                                                 .refresh();
                                           },
@@ -131,7 +131,7 @@ class CartView extends ConsumerWidget {
                                             children: [
                                               InkWell(
                                                   onTap: () {
-                                                    context
+                                                    ref
                                                         .read(cartListProvider)
                                                         .decrement(index);
                                                   },
@@ -155,7 +155,7 @@ class CartView extends ConsumerWidget {
                                                       .toString())),
                                               InkWell(
                                                   onTap: () {
-                                                    context
+                                                    ref
                                                         .read(cartListProvider)
                                                         .increment(index);
                                                   },
